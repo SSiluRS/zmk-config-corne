@@ -10,8 +10,17 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
+
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <150>;
+};
+
+&lt {
+    flavor = "balanced";
+    quick-tap-ms = <150>;
+};
 
 / {
     keymap {
@@ -24,10 +33,10 @@
             // hold: 1=fun  2=nav  3=mouse     4=sym 5=num    tap: ESC TAB SPC | ENT BSP DEL
 
             bindings = <
-&kp GRAVE         &kp Q           &kp W           &kp E      &kp R      &kp T          &kp Y        &kp U            &kp I       &kp O            &kp P               &kp LEFT_BRACKET
-&kp LEFT_SHIFT    &mt LEFT_GUI A  &mt LEFT_ALT S  &kp D      &kp F      &kp G          &kp H        &kp J            &kp K       &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOSTROPHE
-&kp LEFT_CONTROL  &kp Z           &kp X           &kp C      &kp V      &kp B          &kp N        &kp M            &kp COMMA   &kp DOT          &kp FSLH            &none
-                                                  &lt 1 ESC  &lt 2 TAB  &lt 3 ENTER    &lt 4 ENTER  &lt 5 BACKSPACE  &kp DELETE
+&kp GRAVE       &kp Q           &kp W           &kp E      &kp R      &kp T          &kp Y        &kp U            &kp I       &kp O            &kp P               &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &mt LEFT_GUI A  &mt LEFT_ALT S  &kp D      &kp F      &kp G          &kp H        &kp J            &kp K       &mt RIGHT_ALT L  &mt RIGHT_GUI SEMI  &kp APOSTROPHE
+&kp LCTRL       &kp Z           &kp X           &kp C      &kp V      &kp B          &kp N        &kp M            &kp COMMA   &kp DOT          &kp FSLH            &none
+                                                &lt 1 ESC  &lt 2 TAB  &lt 3 ENTER    &lt 4 ENTER  &lt 5 BACKSPACE  &kp DELETE
             >;
         };
 
